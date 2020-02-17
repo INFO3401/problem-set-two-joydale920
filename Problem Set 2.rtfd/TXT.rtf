@@ -1,0 +1,133 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fnil\fcharset0 HelveticaNeue;\f2\fswiss\fcharset0 Helvetica;
+\f3\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red52\green52\blue52;\red11\green92\blue174;\red0\green0\blue0;
+}
+{\*\expandedcolortbl;;\cssrgb\c26667\c26667\c26667;\cssrgb\c0\c44706\c73725;\csgray\c0;
+}
+\margl1440\margr1440\vieww14480\viewh15300\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs57\fsmilli28800 \cf2 \expnd0\expndtw0\kerning0
+Problem Set #2\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0\fs32 \cf2 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 Part One: Shell Commands
+\f1\b0 \
+\
+1. Assume all of the directories below are valid directories (e.g., they exist and we have access to them). What would the following print out?\'a0 \
+\
+cd/usrs/INFO3401/../homework/ ./problem1\
+pwd\
+\
+- Change to \'93usrs\'94 directory\
+- Go into INFO3401 folder\
+- Go up a level to homework directory\
+- Change directory from homework directory to problem1 directory\
+- Finally, print the working directory\
+\
+2. What set of commands would you use to achieve the following:\
+You've found yourself in a situation where your python program is trying to parse files in a directory and is throwing an error. You think it might be a permissions issue (i.e., you don't have permission to access the files in that directory) and need to verify the permissions on all files in that directory. The directory is in your home directory under the "datasets/activedata" directory. Make no assumptions about what directory you are currently working in.\'a0\
+\
+\
+- First run pwd to see what directory you are working in\
+- Then run cd~ /datasets/activedata to get to the correct file in your home directory\
+- pwd\
+- Use sudo cd ~ /datasets/activedata\
+\
+3. Briefly describe what the following set of commands would achieve. What process would happen and what would be printed to the command line?\
+\
+cd ~\
+mkdir ./problem_set_1\
+touch submission.txt\
+cd ..\
+pwd\
+\
+- Go to the home directory\
+- Make a new directory names problem_set_1 within the home directory\
+- Create a new empty file called submission.txt in problem_set_1\
+- Change current directory (problem_set_1) to parent directory (home)??\
+- Print Working Directory\
+\
+4. What set of commands would you use to achieve the following:\
+Copy a document called config.txt from your home directory to the root directory. Then, create a new directory in the root called preferences. Within preferences, copy prefs.txt from a matching directory called preferences in your home directory. Finally, determine that the start and end of the config.txt document in both root and home match.\
+\
+- cd / ----> change current directory to root directory\
+- cp .~/config.txt \'97\'97> copy the config.txt to root directory\
+- mkdir /preferences \'97\'97> make directory named \'93preferences\'94 in the root directory\
+- cp ~/preferences/prefs.txt \'97\'97> copy txt file from root directory to preference directory\
+- head /config.txt \'97\'97> see the beginning of the data in root directory\
+- tail /config.txt \'97\'97> see the end of the data in root directory \
+- head ~/config.txt \'97\'97> see beginning of data in home directory\
+- tail ~/config.txt \'97\'97> see end of data in home directory\
+\
+5. You have accidentally moved a file (~/Documents/datafile.csv) to your current directory rather than copying it. What command did you use to do that? What command should you have used to do that? What command might you use to undo it?\'a0\
+\
+Probably the mv command instead of cp\
+Or possibly added a \'93.\'94 At the end of the command\
+\
+Should have used cp command to copy the file\
+\
+To undo this the user could ruse the mv command to move it back to the original \
+Directory and then use cp to copy the file into the correct directory.\
+\
+\
+6. Download and unzip {\field{\*\fldinst{HYPERLINK "https://canvas.colorado.edu/courses/60694/files/13400065/download?wrap=1"}}{\fldrslt \cf3 \ul \ulc3 asciify-master.zip}} from Canvas. Then, navigate to the directory and use the command line to run asciify.py. What does this script do? Include a screenshot of your results.\'a0\
+\
+*** NEED HELP! 
+\f2\fs24 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screen Shot 2020-02-17 at 11.07.36 AM.png \width13540 \height12900 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}
+\f1\fs32 \cf2 \expnd0\expndtw0\kerning0
+\
+\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 7. Install the Delorean Python package. What command did you use? Then, from the command line, launch Python. Use it to execute the following commands:\'a0\cf2 \
+ \
+- 
+\f3\fs22 \cf4 \kerning1\expnd0\expndtw0 \CocoaLigature0 pip install delorean\
+- Python
+\f1\fs32 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+- 
+\f3\fs22 \cf4 \kerning1\expnd0\expndtw0 \CocoaLigature0 Delorean(datetime=datetime.datetime(2020, 2, 17, 13, 17, 57, 967877), timezone='US/East\
+\
+
+\f1\fs32 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 8. We can scrape webpage content or download collections of data files using wget. NASA, the USDA, and the NCBI all recommend using wget to download data from their repositories because it is faster and allows you to download data in bulk. We'll experiment with that on a smaller scale: use the command line to download data on the World Bank's budgetary expenditures at {\field{\*\fldinst{HYPERLINK "https://finances.worldbank.org/api/views/yu93-ayrw/rows.csv?accessType=DOWNLOAD"}}{\fldrslt \cf3 \ul \ulc3 https://finances.worldbank.org/api/views/yu93-ayrw/rows.csv?accessType=DOWNLOAD\cf3 \ulnone \
+\pard\pardeftab720\partightenfactor0
+\cf3 \ul \'a0(Links to an external site.)\ulnone \
+\ul Links to an external site.\ulnone \
+}}\pard\pardeftab720\partightenfactor0
+\cf2 . What command did you use? Make sure to include this file as part of your submission.\'a0\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 - wget {\field{\*\fldinst{HYPERLINK "https://finances.worldbank.org/api/views/yu93-ayrw/rows.csv?accessType=DOWNLOAD"}}{\fldrslt \cf3 \ul \ulc3 https://finances.worldbank.org/api/views/yu93-ayrw/rows.csv?accessType=DOWNLOAD}}\
+\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 9. The above budgetary data contains both individual items and aggregated totals across different sectors. Let's distill the data down to different aggregated totals. In this dataset, you can use the keyword "Total" to identify only those rows containing aggregate budget items. Use the command line to identify these rows. What command did you use? How many rows did this find (hint: the -c option can be helpful here)? \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+- 
+\f3\fs22 \cf4 \kerning1\expnd0\expndtw0 \CocoaLigature0 grep "Total" -c rows.csv\\?accessType\\=DOWNLOAD  \
+- Number of rows = 33\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs32 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 10. Now, print the lines containing the word "Total" to a file to "distilledExpenditures.csv". What command did you use? Include this file as part of your submission.\'a0 \
+\
+- 
+\f3\fs22 \cf4 \kerning1\expnd0\expndtw0 \CocoaLigature0 grep "Total" rows.csv\\?accessType\\=DOWNLOAD > distilledExpenditures.csv
+\f1\fs32 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\
+\
+\
+\
+}
